@@ -1,0 +1,448 @@
+/*
+    CONFIGURAÇÕES
+*/
+
+:root {
+    --primary-color: #ec135b;
+    --secondary-color: #F06;
+    --background-color: #221F1F;
+    --background-color-secondary: #464141;
+    --text-color: #dddddd;
+    --text-color-secondary: #b9b9b9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/*
+    NAVBAR
+*/
+
+header {
+    padding: 1% 0;
+}
+
+header nav img {
+    width: 20px;
+    height: auto;
+    background-color: var(--primary-color);
+}
+
+header nav h1 {
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+header nav a {
+    color: var(--text-color);
+    transition: 0.2s ease all;
+}
+
+header nav a:hover {
+    color: var(--text-color-secondary);
+}
+
+header nav div.nav-wrapper {
+    margin: 0 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav div.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+header nav div.nav-items div.main-items ul li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+
+/*
+    CAPA
+*/
+
+section#capa {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url('../assets/ET.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    z-index: -1;
+    box-shadow: inset 0px -2rem 2rem var(--background-color);
+}
+
+section p {
+    font-weight: bold;
+}
+
+section#capa div.main-content-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+section#capa div.main-content-wrapper p {
+    position: relative;
+    font-size: 2.3rem;
+    max-width: 70%;
+    margin-top: 30%;
+    margin-left: 10%;
+}
+
+
+/*
+    FILME
+*/
+
+main {
+    margin: 3%;
+}
+
+section.filmes-section h2 {
+    font-size: 1.3rem;
+}
+
+section.filmes-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 1.3rem;
+    background-color: red;
+    margin-left: -0.5%;
+}
+
+div.filmes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 3%;
+}
+
+div.filme {
+    display: flex;
+    flex-direction: column;
+    max-width: 8%;
+    align-items: center;
+}
+
+div.filme img {
+    width: 9rem;
+}
+
+div.filme p {
+    text-align: center;
+    width: 250%;
+}
+
+div.filme p:nth-child(3)::before {
+    content: "✭";
+    white-space: pre;
+    color: gold;
+}
+
+div.filme a:last-child {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.3rem;
+    border: 2px solid var(--secondary-color);
+    transition: 0.1s ease all;
+}
+
+div.filme a:hover:last-child {
+    color: var(--text-color-secondary);
+    background-color: var(--secondary-color);
+}
+
+section.filme-resumo {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url('../assets/filmes/american_pie_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section.filme-resumo div.filme-img img {
+    height: 50vh;
+}
+
+section.filme-resumo div.filme-info {
+    height: 50vh;
+    max-width: 70%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+section.filme-resumo div.filme-info p {
+    max-width: 70%;
+    font-weight: normal;
+    margin-top: 4%;
+}
+
+h2.titulo::before {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 1.3rem;
+    background-color: red;
+    margin-left: -0.5%;
+}
+
+section.filme-info {
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.filme-info h2 {
+    font-size: 1.3rem;
+}
+
+div.botoes {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 50%;
+}
+
+div.botoes a {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin: 0 0.5rem;
+}
+
+div.elenco {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+div.elenco div.atores {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+div.ator {
+    background-color: var(--background-color-secondary);
+    width: 10rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+div.ator img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-top: -5rem;
+}
+
+div.ator p {
+    font-weight: normal;
+}
+
+div.ator p.ator-personagem {
+    color: var(--text-color-secondary);
+}
+
+aside.ficha-tecnica {
+    align-self: flex-end;
+    margin-top: -50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-color-secondary);
+    max-width: 15%;
+    padding: 1rem;
+}
+
+aside.ficha-tecnica div.item-tecnico {
+    margin: 0.5rem 0;
+}
+
+aside.ficha-tecnica div.item-tecnico p.item-valor {
+    font-weight: normal;
+    color: var(--text-color-secondary);
+}
+
+.botao:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.0)) drop-shadow(0px 0px 9px #E50914);
+    transition: all 0.2s;
+}
+
+section.integrantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+}
+
+section.integrantes div.integrante {
+    width: 11rem;
+    height: 11rem;
+    background-color: #464141;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+}
+
+div.integrante img {
+    border-radius: 100%;
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+}
+
+div.sobre-projeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.sobre-projeto p {
+    text-align: justify;
+    max-width: 70%;
+    margin: 2rem auto;
+}
+
+div.sobre-projeto p a {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: var(--secondary-color);
+}
+
+div.sobre-projeto p a:hover {
+    background: none;
+    color: var(--primary-color);
+}
+
+div.sobre-projeto a {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.2s ease all;
+}
+
+div.sobre-projeto a:hover {
+    color: var(--text-color-secondary);
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 1000px) {
+    div.filmes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 3%;
+    }
+    section.filme-resumo {
+        height: 40vh;
+    }
+    section.filme-resumo div.filme-img {
+        display: none;
+    }
+    section.filme-resumo div.filme-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    div.elenco {
+        align-self: center;
+        margin-top: 10%;
+    }
+    div.elenco div.ator {
+        margin: 0 1%;
+    }
+    aside.ficha-tecnica {
+        align-self: center;
+        max-width: 100%;
+        margin-top: 10%;
+    }
+}
+
+.ativo {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.2rem;
+}
+
+@media screen and (max-width: 767px) {
+    section#capa div.main-content-wrapper p {
+        position: relative;
+        font-size: 2.3rem;
+        max-width: 70%;
+        margin-left: 10%;
+    }
+    main h2 {
+        margin: 3% 20%;
+    }
+    div.filmes {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    div.filmes p:first-of-type {
+        width: 250%;
+    }
+    section.filme-resumo {
+        height: 100vh;
+    }
+    div.botoes {
+        max-width: 100%;
+        align-self: center;
+    }
+    div.elenco div.atores {
+        flex-direction: column;
+    }
+    div.atores div.ator:first-child {
+        margin-top: 0.5rem;
+    }
+    div.atores div.ator {
+        margin: 3rem 0;
+    }
+}
