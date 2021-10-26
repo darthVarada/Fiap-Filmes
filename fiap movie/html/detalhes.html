@@ -43,7 +43,7 @@
 
     <section class="filme-resumo">
         <div class="filme-img">
-            <img src="../assets//filmes/American_pie.jpg" alt="American Pie" title="American Pie">
+            <img src="../assets//filmes/American_pie.jpg">
         </div>
         <div class="filme-info">
             <h2>American Pie</h2>
@@ -65,7 +65,7 @@
             <h2 class="titulo">Elenco</h2>
             <div class="atores">
                 <div class="ator">
-                    <img src="../assets/atores/big.jpg" alt="">
+                    <img src="../assets/atores/big.jpg">
                     <p class="ator-nome">Jason Biggs</p>
                     <p class="ator-personagem">Jim Levenstein </p>
                 </div>
@@ -77,36 +77,38 @@
 
             <div class="item-tecnico">
                 <p class="item-titulo">Título Original</p>
-                <p class="item-valor">American Pie</p>
+                <p class="item-valor" id="titulo-tecnica">American Pie</p>
             </div>
 
             <div class="item-tecnico">
                 <p class="item-titulo">Idioma Original</p>
-                <p class="item-valor">Inglês</p>
+                <p class="item-valor" id="filme-idioma">Inglês</p>
             </div>
 
             <div class="item-tecnico">
                 <p class="item-titulo">Orçamento</p>
-                <p class="item-valor">US$ 11 milhões</p>
+                <p class="item-valor" id="filme-orcamento">US$ 11 milhões</p>
             </div>
 
             <div class="item-tecnico">
                 <p class="item-titulo">Receita</p>
-                <p class="item-valor">US$ 235.483.004 milhões</p>
+                <p class="item-valor" id="filme-receita">US$ 235.483.004 milhões</p>
             </div>
 
             <div class="item-tecnico">
                 <p class="item-titulo">Lançamento</p>
-                <p class="item-valor">1999</p>
+                <p class="item-valor" id='filme-ano'>1999</p>
             </div>
 
             <div class="item-tecnico">
                 <p class="item-titulo">Nota</p>
-                <p class="item-valor">9,6</p>
+                <p class="item-valor" id='filme-nota'>9,6</p>
             </div>
         </aside>
     </section>
-
+    
+    <script src= "../js/script.js" ></script>
+    <script>gerarDetalhes(new URLSearchParams(location.search).get('f'));</script>
 </body>
 
 </html>
